@@ -1,0 +1,143 @@
+a{
+	text-decoration: none;
+	color: black;
+}
+
+body{
+	font-family: 'Manrope', sans-serif;
+	height: 100vh;
+}
+
+.header{
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 71px;
+	background-color: white;
+	z-index: 2;
+}
+
+.mini-header{
+	width: 95%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.left-header{
+	display: flex;
+	align-items: center;
+	-margin-left: 30px;
+}
+
+.menubt{
+	width: 37px;
+	height: 28px;
+}
+
+.logo{
+	width: 130px;
+	height: 41px;
+}
+
+.h-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 40%;
+}
+
+.tel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 290px;
+
+}
+
+.soc{
+	display: flex;
+	width: 90px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.shopcart{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #00AAAD;
+	height: 71px;
+	width: 71px;
+}
+
+
+.slider{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sl-left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(50% - 500px);
+	opacity: 0.5;
+	height: 100%;
+	background-color: black;
+}
+
+.sl-right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(50% - 500px);
+	opacity: 0.3;
+	height: 100%;
+	background-color: black;
+}
+
+.slide{
+	width: 1000px;
+	height: 100%;
+	background-size: cover;
+}
+
+#next{
+	position: absolute;
+	bottom: 20%;
+	right: 2%;
+}
+
+#back{
+	position: absolute;
+	bottom: 20%;
+	left: 2%;
+}
+
+.slider>button{
+	background-color: transparent;
+	border: none;
+}
+
+.sliderview{
+	display: flex;
+}
+
+.main{
+	height: 100%;
+	margin-top: 71px;
+}
+
+@media (max-width: 1070px){
+	.h-menu{
+		display: none;
+	}
+}
