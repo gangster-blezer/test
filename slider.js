@@ -68,7 +68,7 @@ swipeStart = function() {
 
 
   document.getElementsByClassName('slider')[0].addEventListener('pointermove', swipeAction);
-  document.addEventListener('pointerup', swipeEnd);
+  document.addEventListener('pointercancel', swipeEnd);
 
 },
 swipeAction = function() {
@@ -92,7 +92,7 @@ swipeEnd = function() {
     document.removeEventListener('mouseup', swipeEnd);
     
     document.removeEventListener('pointermove', swipeAction);
-    document.removeEventListener('pointerup', swipeEnd);
+    document.removeEventListener('pointercancel', swipeEnd);
 
     if(posFinal>0){
   		slide("next");
@@ -106,4 +106,4 @@ document.getElementsByClassName('slider')[0].addEventListener('mousedown', swipe
 document.addEventListener('mouseup', swipeEnd);
 
 document.getElementsByClassName('slider')[0].addEventListener('pointerdown', swipeStart);
-document.addEventListener('pointerup', swipeEnd);
+document.addEventListener('pointercancel', swipeEnd);
