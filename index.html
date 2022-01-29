@@ -14,9 +14,7 @@
 </head>
 <body>
 	<div class="mobile-menu mobile-menu-off">
-		<div class="menu-part">
-			<div class="mob-m">
-			<button style="width: 60px; height: 60px;" onclick="menu('mobile-menu-off','mobile-menu-on')"><img src="img/Group 20.svg" id="close" alt=""></button>
+			<button onclick="menu('mobile-menu-off','mobile-menu-on'); menu('black-part-off','black-part-on');"><img src="img/Group 20.svg" id="close" alt=""></button>
 			<nav class="mobile-nav">
 				<h4>ДЛЯ ПОДРОСТКОВ</h4>
 				<a href="/">Junior</a>
@@ -35,7 +33,7 @@
 				<a href="">Диваны</a>
 				<a href="/">Интерьерные кровати</a>
 				<a href="/">Пуфы</a>
-				<a href="/">Матрасы</a>
+				<h4>Матрасы</h4>
 				<h4>2-Х ЯРУСНЫЕ КРОВАТИ</h4>
 				<a href="/">Тест</a>
 				<a href="/">Тест</a>
@@ -51,19 +49,17 @@
 				<a href="/">Тест</a>
 				<a href="/">Тест</a>
 			</nav>
-		</div>
 	</div>
-		<div class="black-part"></div>
-	</div>
+	<div class="black-part-off"></div>
 	<script src="menu.js"></script>
 	<header class="header">
 		<div class="mini-header">
 		<div class="left-header">
-			<button onclick="menu('mobile-menu-on','mobile-menu-off')"><img src="img/Sandwich.svg" class="menubt" alt=""></button>
+			<button onclick="menu('mobile-menu-on','mobile-menu-off'); menu('black-part-on','black-part-off');"><img src="img/Sandwich.svg" class="menubt" alt=""></button>
 			<a href=""><img src="img/logo-header.svg" class="logo" alt=""></a>
 		</div>
 		<nav class="h-menu">
-			<a href="/" class="menu-itm anim">Каталог</a>
+			<a href="/" class="menu-itm anim" >Каталог</a>
 			<a href="/" class="menu-itm anim">Доставка и сборка</a>
 			<a href="/" class="menu-itm anim">Скидки и Акции</a>
 			<a href="/" class="menu-itm anim">Контакты</a>
@@ -74,7 +70,7 @@
 		</div>
 		<div class="soc">
 			<a href="/"><img src="img/whatsapp.png" alt=""></a>
-			<a href="/"><img src="img/instagram.png" alt=""></a>
+			<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.png" alt=""></a>
 		</div>
 	</div>
 		<div class="shopcart">
@@ -138,8 +134,36 @@
 		<div class="plus"></div>
 	</div>
 	</div>
-
-
+</div>
+<div class="popular">
+		<h2 class="zag"><span>ПОПУЛЯРНЫЕ </span>КОЛЛЕКЦИИ</h2>
+		<div class="popularinfo">
+			
+		</div>
+		<img src="img/banner.png" alt="">
+		<div class="about-us">
+			<div class="about-item">
+				<div class="aboutImg">
+					<img src="img/aboutUs/shield.png" alt="">
+				</div>
+				<p>Гарантированная безопасность:</br>вся наша мебель сертифицирована</br>и проходит многоуровневый</br>контроль.</p>
+			</div>
+			<div class="about-item">
+				<div class="aboutImg"></div>
+				<p>Более 20 коллекций и более 100</br>цветовых решений и тканей на выбор</br>позволят создать уникальный проект</br>для любого пространства</p>
+			</div>
+			<div class="about-item">
+				<div class="aboutImg"></div>
+				<p>Бесплатно сделаем индивидуальный</br>3-D проект дизайна</br>вашей комнаты с учетом ваших</br>пожеланий</p>
+			</div>
+			<div class="about-item">
+				<div class="aboutImg"></div>
+				<p>Только европейские материалы</br>и фурнитура премиального</br>качества: из Германии и</br>Австрии</p>
+			</div>
+		</div>
+</div>
+<div class="best">
+	<h2 class="zag"><span>ЛУЧШИЕ ПРЕДЛОЖЕНИЯ </span>МЕСЯЦА</h2>
 </div>
 <div class="map">
 	<div id="YMapsID"></div>
@@ -151,21 +175,21 @@
     				<h4>ТЦ "Гранд"</h4>
     				<p>г. Химки, Бутаково 4</p>
     			</button>
-    			<a href="tel:">Позвонить</a>
+    			<a href="tel:" class="button-klukva small-txt">Позвонить</a>
     		</div>
     		<div class="shop">
     			<button class="adress" onclick="select(37.605176,55.609629)">
     				<h4>ТЦ "Гранд Юг"</h4>
     				<p>м.Пражская,</br>ул. Кировоградская, д.15</p>
     			</button>
-    			<a href="tel:">Позвонить</a>
+    			<a href="tel:" class="button-klukva small-txt">Позвонить</a>
     		</div>
     		<div class="shop">
     			<button class="adress" onclick="select(37.355722,55.702835)">
     				<h4>ТЦ "Три Кита"</h4>
     				<p>МО, Одинцовский р-н,</br>Новоивановское пгт,</br>ул. Луговая, 1</p>
     			</button>
-    			<a href="tel:">Позвонить</a>
+    			<a href="tel:" class="button-klukva small-txt">Позвонить</a>
     		</div>
     	</div>
     	<div class="office">
@@ -173,12 +197,26 @@
     		<p>Москва, поселение Воскресенское, ул.</br>Центральная, д.66 (ПСБ Усадьба)</p>
     		<div>
     			<p>Тел. : +7 (495) 659-35-66</br>будни 10.00-17.00</p>
-    			<a href="tel:">Позвонить</a>
+    			<a href="tel:" class="button-klukva small-txt">Позвонить</a>
     		</div>
     	</div>
     </div>
     <script src="map.js"></script>
 </div>
+	<div class="contactus">
+		<h2 class="zag"><span>ВСЕГДА ПОМОЖЕМ </span>С ВЫБОРОМ</h2>
+		<img src="img/contactus.png" class="cimg" alt="">
+		<div class="contactus-info">
+			<h4 class="sub-zag">СВЯЖИТЕСЬ С НАМИ</h4>
+			<p class="small-txt">Оставьте заявку на сайте, позвоните или напишите нам — и мы поможем вам создать комнату мечты для вас и вашего малыша.</br></br>Если нужно, мы легко превратим детскую в комнату принцессы, каюту капитана пиратского корабля или настоящие джунгли.</br></br>Просто расскажите нам о вашей интерьерной задаче,а мы предложим оптимальное решение с учетом всех пожеланий, которое идеально впишется в ваше пространство.</p>
+			<div class="contactusbtns">
+				<button class="button-klukva small-txt">Оставить заявку</button>
+				<a href=""><img src="img/whatsapp.png" alt=""></a>
+				<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+<iframe class="klukva-video" src="https://www.youtube.com/embed/17NbNGbotUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </main>
 </body>
 </html>

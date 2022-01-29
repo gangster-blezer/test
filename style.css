@@ -22,9 +22,53 @@ h1,h2,h3,h4,h5,h6{
 	padding: 0;
 }
 
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 100%;
+	margin-top: 71px;
+}
+
+
 .mobile-menu-on{
 	transform: translateX(0);
 	transition: 1s;
+}
+
+.zag{
+	width: 100%;
+	/* ВСЕГДА ПОМОЖЕМ С ВЫБОРОМ */
+	font-family: Manrope;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	margin-top: 100px;
+	margin-bottom: 70px;
+}
+
+.sub-zag{
+	color: black;
+	font-size: 24px;
+}
+
+.small-txt{
+	color: black;
+	font-size: 14px;
+}
+
+.button-klukva{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: #00AAAD;
+	font-size: 14px;
+	border-radius: 20px;
+}
+
+.zag>span{
+	color: #EE2E3B;
 }
 
 .mobile-menu-off{
@@ -38,33 +82,29 @@ h1,h2,h3,h4,h5,h6{
 	left: 0;
 	z-index: 5;
 	display: flex;
-	width: 100vw;
-	height: 100vh;
-}
-
-.menu-part{
-	display: flex;
-	justify-content: center;
 	align-items: center;
 	width: 600px;
-	min-width: 600px;
+	height: 100vh;
 	background-color: white;
-	height: 100%;
-}
-
-.mob-m{
-	display: flex;
-	width: 80%;
-	height: 90%;
-	justify-content: space-between;
 }
 
 #close{
+	position: absolute;
+	top: 30px;
+	left: 30px;
 	width: 60px;
 	height: 60px;
 }
 
-.black-part{
+.black-part-off{
+	display: none;
+}
+
+.black-part-on{
+	display: block;
+	position: fixed;
+	top: 0;
+	z-index: 4;
 	width: 100%;
 	height: 100%;
 	background: black;
@@ -73,7 +113,10 @@ h1,h2,h3,h4,h5,h6{
 
 .mobile-nav{
 	display: flex;
+	position: absolute;
+	right: 50px;
 	flex-direction: column;
+	height: 500px;
 	overflow-y: scroll;
 }
 
@@ -235,14 +278,11 @@ button:hover{
 
 .sliderview{
 	display: flex;
-}
-
-.main{
-	height: 100%;
-	margin-top: 71px;
+	flex-wrap: nowrap;
 }
 
 .itemsf{
+	width: 100%;
 	height: 70px;
 	color: white;
 	background-color: #EE2E3B;
@@ -254,7 +294,7 @@ button:hover{
 .itemsf h3{
 	text-align: center;
 	width: 24.8%;
-	font: 20px SemiBold;
+	font-size: 20px;
 }
 
 .itemsf h3:hover{
@@ -364,12 +404,51 @@ button:hover{
 	-transform: translateX(50%);
 }
 
+.popular{
+	width: 85%;
+}
+
+.about-us{
+	margin-top: 70px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about-item{
+	display: flex;
+	width: 280px;
+	align-items: center;
+	flex-direction: column;
+}
+
+.aboutImg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 126px;
+	height: 126px;
+	border-radius: 100px;
+	background: #EE2E3B;
+}
+
+.aboutImg>img{
+	width: 56px;
+	height: 56px;
+}
+
+.about-item>p{
+	text-align: center;
+	font-size: 16px;
+}
+
 .map{
+	width: 100%;
 	display: flex;
 	align-items: center;
 	color: white;
 	background: black;
-  opacity: 0.8;
+  	opacity: 0.8;
 }
 
 #YMapsID{
@@ -462,20 +541,65 @@ button:hover{
 }
 
 .shop>a{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	background-color: #00AAAD;
-	font-size: 14px;
-	border-radius: 20px;
 	width: 100px;
 	height: 30px;
+}
+
+.contactus{
+	display: flex;
+	width: 85%;
+	min-width: 1060px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactus-info{
+	width: 400px;
+}
+
+.cimg{
+	width: 640px;
+	height: 360px;
+}
+
+.contactusbtns{
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactusbtns > button{
+	width: 170px;
+	height: 28px;
+}
+
+.contactusbtns > a >img{
+	width: 27px;
+	height: 27px;
+}
+
+.klukva-video{
+	width: 100%;
+	height: 60vw;
+	margin-top: 120px;
 }
 
 @media (max-width: 1070px){
 	.h-menu{
 		display: none;
+	}
+
+	.contactus > div{
+		display: flex;
+		width: 85%;
+		min-width: 900px;
+	}
+
+	.cimg{
+		width: 480px;
+		height: 260px;
 	}
 }
 
@@ -484,8 +608,45 @@ button:hover{
 		display: none;
 	}
 
-	.menu-part{
+	.mobile-menu{
 		width: 100%;
 		min-width: 200px
 	}
+
+	.slider{
+		height: calc(100vw / 1.3);
+	}
+
+	.sliderview{
+	position: absolute;
+	width: calc(100% * 3);
+	height: 100%;
+}
+
+	.sl-left{
+	width: 0;
+	height: 0;
+	background-color: black;
+}
+
+.sl-right{
+	width: 0;
+	height: 0;
+	background-color: black;
+}
+
+.slide{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+#next{
+	width: 60px
+}
+
+#back{
+	width: 60px
+}
+
 }

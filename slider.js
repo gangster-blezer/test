@@ -62,6 +62,7 @@ swipeStart = function() {
 
   // берем начальную позицию курсора по оси Х
   posInit = posX1 = evt.clientX;
+  posYInit = posY1 = evt.clientY;
   //console.log(posInit)
   document.getElementsByClassName('slider')[0].addEventListener('mousemove', swipeAction);
   document.addEventListener('mouseup', swipeEnd);
@@ -73,6 +74,18 @@ swipeStart = function() {
 },
 swipeAction = function() {
   let evt = getEvent();
+
+  posY2 = posY1 - evt.clientY;
+  posY1 = evt.clientY;
+
+      let posY = Math.abs(posY2);
+      //console.log(posY);
+      if (posY > 111) {
+        isSwipe = false;
+      } else if (posY < 111) {
+        isSwipe = true;
+      }
+
   if(isSwipe){
   		posX2 = posX1 - evt.clientX;
   		posX1 = evt.clientX;
@@ -85,7 +98,8 @@ swipeAction = function() {
 
 swipeEnd = function() {
     posFinal = posInit - posX1;
-    console.log(posFinal);
+    posYFinal = Math.abs(posYInit - posY1);
+    console.log(posYFinal);
     isScroll = false;
     isSwipe = false;
     document.removeEventListener('mousemove', swipeAction);
@@ -94,10 +108,10 @@ swipeEnd = function() {
     document.removeEventListener('pointermove', swipeAction);
     document.removeEventListener('pointercancel', swipeEnd);
 
-    if(posFinal>0){
+    if(posFinal>0 && posYFinal < 10){
   		slide("next");
   	}
-  	if(posFinal<0){
+  	if(posFinal<0 && posYFinal < 10){
   		slide("back");
   	}
 }
