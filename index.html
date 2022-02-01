@@ -14,7 +14,9 @@
 </head>
 <body>
 	<div class="mobile-menu mobile-menu-off">
-			<button onclick="menu('mobile-menu-off','mobile-menu-on'); menu('black-part-off','black-part-on');"><img src="img/Group 20.svg" id="close" alt=""></button>
+			<button class="close" onclick="menu('mobile-menu-off','mobile-menu-on'); menu('black-part-off','black-part-on');">
+				<img src="img/close.svg"  alt="">
+			</button>
 			<nav class="mobile-nav">
 				<h4>ДЛЯ ПОДРОСТКОВ</h4>
 				<a href="/">Junior</a>
@@ -51,6 +53,8 @@
 			</nav>
 	</div>
 	<div class="black-part-off"></div>
+	<a href="/" class="desing-project"><p>Запросить дизайн-проект</p></a>
+	<div class="phone"><img src="img/phone.svg" alt=""></div>
 	<script src="menu.js"></script>
 	<header class="header">
 		<div class="mini-header">
@@ -69,12 +73,12 @@
 			<a href="/" style="font-weight: 500; color: #A3A3A3; text-decoration: underline;">Обратный звонок</a>
 		</div>
 		<div class="soc">
-			<a href="/"><img src="img/whatsapp.png" alt=""></a>
-			<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.png" alt=""></a>
+			<a href="/"><img src="img/whatsapp.svg" alt=""></a>
+			<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.svg" alt=""></a>
 		</div>
 	</div>
 		<div class="shopcart">
-			<img src="img/shopping-cart.png" alt="">
+			<img src="img/shopping-cart.svg" alt="">
 		</div>
 	</header>
 	<main class="main">
@@ -135,16 +139,72 @@
 	</div>
 	</div>
 </div>
-<div class="popular">
-		<h2 class="zag"><span>ПОПУЛЯРНЫЕ </span>КОЛЛЕКЦИИ</h2>
+<div class="contaner">
+	<div class="popular-slider">
+		<h2 class="zag zag-pop"><span>ПОПУЛЯРНЫЕ </span>КОЛЛЕКЦИИ</h2>
+		<div class="poplular-slider-track">
+		<div class="popular">
 		<div class="popularinfo">
-			
+			<h4 class="sub-zag">JUNIOR</h4>
+			<p class="small-txt">Подростковая мебель уже не должна быть детской </br> и милой, она должна быть стильной, что выражается</br>в строгих формах, интересной цветовой гамме</br>и высоком качестве. Именно это описание подходит</br>как нельзя лучше для коллекции Junior.</br></br>Cерия имеет очень продуманную эргономику,</br>включающую удобные шкафы, скрытые полки</br>и дополнительные места хранения, позволяющие</br>легко поддерживать порядок в комнате.</p>
+			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
-		<img src="img/banner.png" alt="">
-		<div class="about-us">
+			<img src="img/polularslider/banner.png" class="cimg" alt="">
+		</div>
+
+		<div class="popular">
+		<div class="popularinfo">
+			<h4 class="sub-zag">TEENAGER</h4>
+			<p class="small-txt">Серия «Teenager» в эко-урбанистическом стиле для по-настоящему модных подростков. Она воплотила в себе лучшие идеи со всего мира - яркий стиль больших городов, уют деревянного дома и скандинавское удобство.Сочетание фактур дерева и бетона, яркие цвета, смелые формы и продуманность каждой детали: эта комната как-будто впитала в себя весь дух современности.</p>
+			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
+		</div>
+			<img src="img/polularslider/tenager.png" class="cimg" alt="">
+		</div>
+
+		<div class="popular">
+		<div class="popularinfo">
+			<h4 class="sub-zag">MINI</h4>
+			<p class="small-txt">Все мы в детстве мечтали быть похожими на родителей: мальчишки клеили усы, девочки надевали мамины туфли.И все мы, конечно, обожали играть и дремать в любимом папином кресле. Именно эта идея вдохновила нас на создание коллекции «Mini».Компактные размеры и выбор модулей позволит создать идеальное пространство, где ваш малыш сможет играть, спать,развиваться,экспериментировать и мечтать.</p>
+			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
+		</div>
+			<img src="img/polularslider/3.png" class="cimg" alt="">
+		</div>
+
+		<div class="popular">
+		<div class="popularinfo">
+			<h4 class="sub-zag">VELVET</h4>
+			<p class="small-txt">Комната «Velvet» - это идеальное сочетание цвета и фактуры, дополненное декором ручной работы.Плавные изгибы в сочетании с прямыми линиями, матовые тона и благородный блеск. В этой коллекции  каждый предмет имеет свое предназначение, а большие пространства дополняются изящными акцентами.</p>
+			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
+		</div>
+			<img src="img/polularslider/4.png" class="cimg" alt="">
+		</div>
+
+		<div class="popular">
+		<div class="popularinfo">
+			<h4 class="sub-zag">CALYPSO</h4>
+			<p class="small-txt">Как и одноименный корабль Кусто, «Calypso» наполнена духом путешествий: наряду с комфортным рабочим столом, на котором без труда можно расположить навигационные карты, есть уютный диван для чтения приключенческих романов и размышлений о новых странствиях. А в ниши для хранения, стилизованные под корабельные сундуки, поместятся целые горы сокровищ. </p>
+			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
+		</div>
+			<img src="img/polularslider/5.png" class="cimg" alt="">
+		</div>
+		</div>
+		
+
+		<div class="slider-btns popular-slider-btn">
+				<button class="active-sl-btn" onclick="slideset(1,this)"></button>
+				<button onclick="slideset(2,this)"></button>
+				<button onclick="slideset(3,this)"></button>
+				<button onclick="slideset(4,this)"></button>
+				<button onclick="slideset(5,this)"></button>
+	</div>
+	<script src="popularslider.js"></script>
+	</div>
+</div>
+<div class="contaner">
+	<div class="about-us">
 			<div class="about-item">
 				<div class="aboutImg">
-					<img src="img/aboutUs/shield.png" alt="">
+					<img src="img/aboutUs/shilde.svg" alt="">
 				</div>
 				<p>Гарантированная безопасность:</br>вся наша мебель сертифицирована</br>и проходит многоуровневый</br>контроль.</p>
 			</div>
@@ -162,8 +222,11 @@
 			</div>
 		</div>
 </div>
-<div class="best">
+<div class="contaner">
+	<div class="best">
 	<h2 class="zag"><span>ЛУЧШИЕ ПРЕДЛОЖЕНИЯ </span>МЕСЯЦА</h2>
+	<img src="img/bedslide.png" alt="">
+</div>
 </div>
 <div class="map">
 	<div id="YMapsID"></div>
@@ -203,6 +266,7 @@
     </div>
     <script src="map.js"></script>
 </div>
+<div class="contaner">
 	<div class="contactus">
 		<h2 class="zag"><span>ВСЕГДА ПОМОЖЕМ </span>С ВЫБОРОМ</h2>
 		<img src="img/contactus.png" class="cimg" alt="">
@@ -211,11 +275,12 @@
 			<p class="small-txt">Оставьте заявку на сайте, позвоните или напишите нам — и мы поможем вам создать комнату мечты для вас и вашего малыша.</br></br>Если нужно, мы легко превратим детскую в комнату принцессы, каюту капитана пиратского корабля или настоящие джунгли.</br></br>Просто расскажите нам о вашей интерьерной задаче,а мы предложим оптимальное решение с учетом всех пожеланий, которое идеально впишется в ваше пространство.</p>
 			<div class="contactusbtns">
 				<button class="button-klukva small-txt">Оставить заявку</button>
-				<a href=""><img src="img/whatsapp.png" alt=""></a>
-				<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.png" alt=""></a>
+				<a href=""><img src="img/whatsapp.svg" alt=""></a>
+				<a href="https://www.instagram.com/klukva_moskva"><img src="img/instagram.svg" alt=""></a>
 			</div>
 		</div>
 	</div>
+</div>
 <iframe class="klukva-video" src="https://www.youtube.com/embed/17NbNGbotUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </main>
 </body>

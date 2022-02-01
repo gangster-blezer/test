@@ -14,12 +14,13 @@ function slide(slide) {
 	}
 
 	let start = Date.now(); // запомнить время начала
+  let time = 800;
 
 	let timer = setInterval(function() {
 	  // сколько времени прошло с начала анимации?
 	  let timePassed = Date.now() - start;
 
-	  if (timePassed > slidew) {
+	  if (timePassed >= time) {
  	   	clearInterval(timer); // закончить анимацию через 2 секунды
 	    document.getElementsByClassName('sliderview')[0].setAttribute("style", "transform: translateX(-"+tr+"px);");
 		setslide(slides[(slidenum-1)%slides.length],slides[slidenum%slides.length],slides[(slidenum+1)%slides.length]);
@@ -27,10 +28,10 @@ function slide(slide) {
 	  }
 
 	  if(slide=="next"){
-		document.getElementsByClassName('sliderview')[0].setAttribute("style", "transform: translateX(-"+(tr+timePassed)+"px);");
+		document.getElementsByClassName('sliderview')[0].setAttribute("style", "transform: translateX(-"+(tr + ((slidew*timePassed)/time))+"px);");
 	}
 	if(slide=="back"){
-		document.getElementsByClassName('sliderview')[0].setAttribute("style", "transform: translateX("+(-tr+timePassed)+"px);");
+		document.getElementsByClassName('sliderview')[0].setAttribute("style", "transform: translateX("+(-tr + ((slidew*timePassed)/time))+"px);");
 	}
 	  
 
@@ -65,11 +66,11 @@ swipeStart = function() {
   posYInit = posY1 = evt.clientY;
   //console.log(posInit)
   document.getElementsByClassName('slider')[0].addEventListener('mousemove', swipeAction);
-  document.addEventListener('mouseup', swipeEnd);
+  document.getElementsByClassName('slider')[0].addEventListener('mouseup', swipeEnd);
 
 
   document.getElementsByClassName('slider')[0].addEventListener('pointermove', swipeAction);
-  document.addEventListener('pointercancel', swipeEnd);
+  document.getElementsByClassName('slider')[0].addEventListener('pointercancel', swipeEnd);
 
 },
 swipeAction = function() {
@@ -117,7 +118,7 @@ swipeEnd = function() {
 }
 
 document.getElementsByClassName('slider')[0].addEventListener('mousedown', swipeStart);
-document.addEventListener('mouseup', swipeEnd);
+document.getElementsByClassName('slider')[0].addEventListener('mouseup', swipeEnd);
 
 document.getElementsByClassName('slider')[0].addEventListener('pointerdown', swipeStart);
-document.addEventListener('pointercancel', swipeEnd);
+document.getElementsByClassName('slider')[0].addEventListener('pointercancel', swipeEnd);

@@ -4,6 +4,7 @@ a{
 }
 
 body{
+	padding: 0;
 	font-family: 'Manrope', sans-serif;
 	font-size: 15px;
 	height: 100vh;
@@ -23,17 +24,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	height: 100%;
 	margin-top: 71px;
 }
 
-
-.mobile-menu-on{
-	transform: translateX(0);
-	transition: 1s;
+.contaner{
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 120px;
 }
 
 .zag{
@@ -45,6 +44,59 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 48px;
 	margin-top: 100px;
 	margin-bottom: 70px;
+}
+
+.slider-btns{
+	position: absolute;
+	z-index: 1;
+}
+
+.slider-btns>button{
+	width: 15px;
+	height: 15px;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin-right: 10px;
+}
+
+.active-sl-btn{
+	background: #EE2E3B;
+}
+
+.desing-project{
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: rotate(-90deg) translateY(-150%);
+	display: inline-flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 18px;
+	border-radius: 20px;
+	color: white;
+	z-index: 10;
+	background-color: #00AAAD;
+	width: 250px;
+	height: 76px;
+}
+
+.phone{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100px;
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+	background-color: #00AAAD;
+}
+
+.phone>img{
+	width: 37px;
+	height: 38px;
 }
 
 .sub-zag{
@@ -71,26 +123,37 @@ h1,h2,h3,h4,h5,h6{
 	color: #EE2E3B;
 }
 
+.mobile-menu-on{
+	transform: translateX(0);
+	transition: 1s;
+}
+
 .mobile-menu-off{
-	transform: translateX(-100vw);
+	transform: translateX(-100%);
 	transition: 1s;
 }
 
 .mobile-menu{
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 5;
-	display: flex;
+	z-index: 12;
 	align-items: center;
 	width: 600px;
 	height: 100vh;
 	background-color: white;
 }
 
-#close{
+.close{
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	top: 30px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	border-radius: 100px;
 	left: 30px;
 	width: 60px;
 	height: 60px;
@@ -104,7 +167,7 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 	position: fixed;
 	top: 0;
-	z-index: 4;
+	z-index: 11;
 	width: 100%;
 	height: 100%;
 	background: black;
@@ -224,12 +287,17 @@ button:hover{
 	width: 71px;
 }
 
+.shopcart>img{
+	width: 33px;
+	height: 33px;
+}
+
 
 .slider{
 	display: flex;
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 615px;
 	overflow: hidden;
 }
 
@@ -237,7 +305,7 @@ button:hover{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: calc(50% - 500px);
+	width: calc(50% - 400px);
 	opacity: 0.5;
 	height: 100%;
 	background-color: black;
@@ -247,14 +315,14 @@ button:hover{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: calc(50% - 500px);
+	width: calc(50% - 400px);
 	opacity: 0.3;
 	height: 100%;
 	background-color: black;
 }
 
 .slide{
-	width: 1000px;
+	width: 800px;
 	height: 100%;
 	background-size: cover;
 }
@@ -404,12 +472,50 @@ button:hover{
 	-transform: translateX(50%);
 }
 
-.popular{
+.popular-slider{
 	width: 85%;
+	display: flex;
+	flex-wrap: wrap;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	max-width: 1200px;
+	min-width: 1060px;
+}
+
+.zag-pop{
+
+}
+
+.poplular-slider-track{
+	display: flex;
+	height: 400px;
+}
+
+.popular{
+	display: flex;
+	width: 1200px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.popularinfo{
+	width: 400px;
+}
+
+.popularbtn{
+	width: 170px; 
+	height: 26px;
+	margin-bottom: 20px;
+}
+
+.popular-slider-btn{
+	left: 0;
+	bottom: 0;
 }
 
 .about-us{
-	margin-top: 70px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -417,7 +523,7 @@ button:hover{
 
 .about-item{
 	display: flex;
-	width: 280px;
+	width: 300px;
 	align-items: center;
 	flex-direction: column;
 }
@@ -433,13 +539,24 @@ button:hover{
 }
 
 .aboutImg>img{
-	width: 56px;
+	width: 48px;
 	height: 56px;
 }
 
 .about-item>p{
 	text-align: center;
 	font-size: 16px;
+}
+
+.best{
+	-width: 85%;
+
+	min-width: 1060px;
+	max-width: 1200px;
+}
+
+.best>img{
+	width: 100%;
 }
 
 .map{
@@ -548,6 +665,7 @@ button:hover{
 .contactus{
 	display: flex;
 	width: 85%;
+	max-width: 1200px;
 	min-width: 1060px;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -583,7 +701,6 @@ button:hover{
 .klukva-video{
 	width: 100%;
 	height: 60vw;
-	margin-top: 120px;
 }
 
 @media (max-width: 1070px){
@@ -609,8 +726,7 @@ button:hover{
 	}
 
 	.mobile-menu{
-		width: 100%;
-		min-width: 200px
+		
 	}
 
 	.slider{
