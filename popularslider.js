@@ -1,25 +1,75 @@
-function slideset(n,bt) {
-	let start = Date.now(); // запомнить время начала
-  	let time = 800;
-  	let slidew = document.querySelector('.popular').offsetWidth;
-  	document.getElementsByClassName("active-sl-btn")[0].classList.remove("active-sl-btn");
-  	bt.classList.add("active-sl-btn");
+var numprev;
 
-	let timer = setInterval(function() {
+function slideset(n,bt) {
+  if(numprev==undefined){
+      numprev = 1;
+    }
+
+    //console.log(numprev);
+
+  if(n==6){
+    n = 1;
+    console.log("есть");
+  }
+
+  if(n==0){
+    n=5;
+  }
+
+  
+
+	let startp = Date.now(); // запомнить время начала
+  	let time = 800;
+  	let slidewp = document.querySelector('.popular').offsetWidth;
+  	document.getElementById(numprev).classList.remove("active-sl-btn");
+    if(bt==null){
+      document.getElementById(n).classList.add("active-sl-btn");
+    }else{
+      bt.classList.add("active-sl-btn");
+    }
+
+    //let numprev = Math.abs(getTrX(document.querySelector('.poplular-slider-track'))/slidew)+1;
+
+    function goslide(num){
+      return slidewp*(num-1);
+    }
+
+
+	let timerp = setInterval(function() {
 	  // сколько времени прошло с начала анимации?
-	  let timePassed = Date.now() - start;
+	  let timePassed = Date.now() - startp;
 
 	  if (timePassed >= time) {
-	  	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+ -((slidew*(n-2)) + (slidew))+"px);");
- 	   	clearInterval(timer); // закончить анимацию через 2 секунды
+      //bt.disabled = true;
+      numprev = Number(n);
+	  	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+ -((slidewp*(n-2)) + (slidewp))+"px);");
+ 	   	clearInterval(timerp); // закончить анимацию через 2 секунды
 	    return;
 	  }
 
-	  console.log(window.getComputedStyle(document.querySelector('.poplular-slider-track')).transform);
-	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+ -((slidew*(n-2)) + ((slidew*timePassed)/time))+"px);");
+    if(n<numprev){
+      tr = -(goslide(n+1)) + ((slidewp*timePassed)/time);
+    }else{
+      tr = -(goslide(n-1)) - ((slidewp*timePassed)/time);
+    }
+    
+    
+	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+tr+"px);");
 	  
 
 	}, 10);
+}
+
+//getTrX(document.querySelector('.poplular-slider-track'));
+
+function getTrX(obj){
+  let tr = window.getComputedStyle(obj).transform.split(",")[4];
+    if(tr==undefined){
+      return 0;
+    }else {
+      return tr;
+    }
+     
 }
 
 
@@ -32,7 +82,7 @@ getEvent = function() {
 // или es6
 getEvent = () => event.type.search('touch') !== -1 ? event.touches[0] : event,
 
-swipeStart = function() {
+swipeStartp = function() {
   let evt = getEvent();
   isSwipe = true;
 
@@ -40,15 +90,15 @@ swipeStart = function() {
   posInit = posX1 = evt.clientX;
   posYInit = posY1 = evt.clientY;
   //console.log(posInit)
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousemove', swipeAction);
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEnd);
+  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousemove', swipeActionp);
+  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEndp);
 
 
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointermove', swipeAction);
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEnd);
+  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointermove', swipeActionp);
+  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEndp);
 
 },
-swipeAction = function() {
+swipeActionp = function() {
   let evt = getEvent();
 
   posY2 = posY1 - evt.clientY;
@@ -72,28 +122,34 @@ swipeAction = function() {
   
 }
 
-swipeEnd = function() {
+swipeEndp = function() {
     posFinal = posInit - posX1;
     posYFinal = Math.abs(posYInit - posY1);
-    console.log(posYFinal);
+    //console.log(posYFinal);
     isScroll = false;
     isSwipe = false;
-    document.removeEventListener('mousemove', swipeAction);
-    document.removeEventListener('mouseup', swipeEnd);
+    document.removeEventListener('mousemove', swipeActionp);
+    document.removeEventListener('mouseup', swipeEndp);
     
-    document.removeEventListener('pointermove', swipeAction);
-    document.removeEventListener('pointercancel', swipeEnd);
+    document.removeEventListener('pointermove', swipeActionp);
+    document.removeEventListener('pointercancel', swipeEndp);
 
+    if(numprev==undefined){
+      numprev = 1;
+    }
+    
     if(posFinal>0 && posYFinal < 10){
-  		slide("next");
+      //console.log(document.getElementById( Number(numprev)+1 ));
+      
+  		slideset(numprev+1,document.getElementById( Number(numprev)+1 ));
   	}
   	if(posFinal<0 && posYFinal < 10){
-  		slide("back");
+  		slideset(numprev-1,document.getElementById( Number(numprev)-1 ));
   	}
 }
 
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousedown', swipeStart);
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEnd);
+document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousedown', swipeStartp);
+document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEndp);
 
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointerdown', swipeStart);
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEnd);
+document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointerdown', swipeStartp);
+document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEndp);

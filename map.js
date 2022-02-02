@@ -9,10 +9,12 @@ YMaps.jQuery(function () {
             map.enableScrollZoom();
 
             // Создание стиля для значка метки
+
+            
             var s = new YMaps.Style();
             s.iconStyle = new YMaps.IconStyle();
             s.iconStyle.href = "img/placeholder.png";
-            s.iconStyle.size = new YMaps.Point(53, 53);
+            s.iconStyle.size = new YMaps.Point(30, 30);
             // Создание метки и добавление ее на карту
             var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.605176,55.609629), {style: s});
             var placemark2 = new YMaps.Placemark(new YMaps.GeoPoint(37.438037,55.885481), {style: s});
