@@ -18,6 +18,8 @@ function slide(slide) {
 
 	let timer = setInterval(function() {
 	  // сколько времени прошло с начала анимации?
+
+    console.log(tr);
 	  let timePassed = Date.now() - start;
 
 	  if (timePassed >= time) {

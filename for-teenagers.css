@@ -1,0 +1,168 @@
+body{
+	font-family: 'Manrope', sans-serif;
+}
+
+button{
+	background-color: transparent;
+	color: white;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.contaner-center{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 120px;
+}
+
+.footer{
+	background-color: #000000;
+}
+
+.vety-little-txt{
+	font-size: 14px;
+	color: #A3A3A3;
+}
+
+.zag{
+	width: 100%;
+	/* ВСЕГДА ПОМОЖЕМ С ВЫБОРОМ */
+	font-family: Manrope;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	margin-top: 100px;
+	margin-bottom: 70px;
+}
+
+.zag>span{
+	color: #EE2E3B;
+}
+
+.socimg{
+	width: 27px;
+	height: 27px;
+	margin-right: 5px;
+}
+
+.litle-img{
+	width: 26vw;
+}
+
+.big-img{
+	width: 61vw;
+}
+
+.c-img{
+	width: 32vw;
+}
+
+.setka{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 90vw;
+	-width: 1300px;
+}
+
+.sub-zag{
+	color: black;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.small-txt{
+	color: black;
+	font-size: 14px;
+}
+
+.button-klukva{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: #00AAAD;
+	font-size: 14px;
+	border-radius: 20px;
+}
+
+.setkaitm{
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.list-text{
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%,50%);
+	padding: 7px 30px;
+	white-space: nowrap;
+	background-color: #E5E5E5;
+}
+
+.info-klukva{
+	width: 90vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.klukva-txt{
+	display: flex;
+	justify-content: space-between;
+	width: 900px;
+}
+
+.klukva-txt>p{
+	width: 400px;
+}
+
+.consultation{
+	width: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about-us{
+	display: flex;
+	width: 90vw;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about-item{
+	display: flex;
+	width: 300px;
+	align-items: center;
+	flex-direction: column;
+}
+
+.aboutImg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 126px;
+	height: 126px;
+	border-radius: 100px;
+	background: #EE2E3B;
+}
+
+.aboutImg>img{
+	width: 48px;
+	height: 56px;
+}
+
+.about-item>p{
+	text-align: center;
+	font-size: 16px;
+}

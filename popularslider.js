@@ -1,4 +1,5 @@
 var numprev;
+var track = document.getElementsByClassName('poplular-slider-track')[0];
 
 function slideset(n,bt) {
   if(numprev==undefined){
@@ -42,19 +43,19 @@ function slideset(n,bt) {
 	  if (timePassed >= time) {
       //bt.disabled = true;
       numprev = Number(n);
-	  	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+ -((slidewp*(n-2)) + (slidewp))+"px);");
+	  	track.setAttribute("style", "transform: translateX("+ -((slidewp*(n-2)) + (slidewp))+"px);");
  	   	clearInterval(timerp); // закончить анимацию через 2 секунды
 	    return;
 	  }
 
     if(n<numprev){
-      tr = -(goslide(n+1)) + ((slidewp*timePassed)/time);
+      tran = -(goslide(n+1)) + ((slidewp*timePassed)/time);
     }else{
-      tr = -(goslide(n-1)) - ((slidewp*timePassed)/time);
+      tran = -(goslide(n-1)) - ((slidewp*timePassed)/time);
     }
     
     
-	document.getElementsByClassName('poplular-slider-track')[0].setAttribute("style", "transform: translateX("+tr+"px);");
+	track.setAttribute("style", "transform: translateX("+tran+"px);");
 	  
 
 	}, 10);
@@ -90,12 +91,12 @@ swipeStartp = function() {
   posInit = posX1 = evt.clientX;
   posYInit = posY1 = evt.clientY;
   //console.log(posInit)
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousemove', swipeActionp);
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEndp);
+  track.addEventListener('mousemove', swipeActionp);
+  track.addEventListener('mouseup', swipeEndp);
 
 
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointermove', swipeActionp);
-  document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEndp);
+  track.addEventListener('pointermove', swipeActionp);
+  track.addEventListener('pointercancel', swipeEndp);
 
 },
 swipeActionp = function() {
@@ -148,8 +149,8 @@ swipeEndp = function() {
   	}
 }
 
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mousedown', swipeStartp);
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('mouseup', swipeEndp);
+track.addEventListener('mousedown', swipeStartp);
+track.addEventListener('mouseup', swipeEndp);
 
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointerdown', swipeStartp);
-document.getElementsByClassName('poplular-slider-track')[0].addEventListener('pointercancel', swipeEndp);
+track.addEventListener('pointerdown', swipeStartp);
+track.addEventListener('pointercancel', swipeEndp);

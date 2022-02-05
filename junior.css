@@ -1,0 +1,224 @@
+body{
+	font-family: 'Manrope', sans-serif;
+}
+
+button{
+	background-color: transparent;
+	color: white;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.contaner-center{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 120px;
+}
+
+.footer{
+	background-color: #000000;
+}
+
+.vety-little-txt{
+	font-size: 14px;
+	color: #A3A3A3;
+}
+
+.zag{
+	width: 100%;
+	/* ВСЕГДА ПОМОЖЕМ С ВЫБОРОМ */
+	font-family: Manrope;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	margin-top: 100px;
+	margin-bottom: 70px;
+}
+
+.zag>span{
+	color: #EE2E3B;
+}
+
+.socimg{
+	width: 27px;
+	height: 27px;
+	margin-right: 5px;
+}
+
+.sub-zag{
+	color: black;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.small-txt{
+	color: black;
+	font-size: 14px;
+}
+
+.button-klukva{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: #00AAAD;
+	font-size: 14px;
+	border-radius: 20px;
+	padding: 5px 20px;
+}
+
+.junior{
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.junior-info{
+	width: 400px;
+}
+
+.cimg{
+	width: 55vw;
+}
+
+.best-txt{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.juniorbtns{
+	margin-top: 30px;
+	display: flex;
+}
+
+.best-junior{
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.best-junior>p{
+	width: 230px;
+}
+
+.slider-color{
+	position: relative;
+	overflow: hidden;
+	height: 450px;
+}
+
+.slide-color{
+	width: 100vw;
+	display: flex;
+}
+
+.slide-color>a{
+	position: relative;
+}
+
+.slide-color>a:nth-child(2n){
+	margin-left: 20px;
+}
+
+.arrow{
+	position: absolute;
+	width: 100px;
+	z-index: 5;
+	right: 50px;
+	transform: translateY(50%);
+	top: 50%;
+}
+
+.slider-color-wrapper{
+	display: flex;
+	width: calc(100vw * 8);
+	
+}
+
+.polu-slide{
+	position: relative;
+	user-select: none;
+	width: 600px;
+}
+
+.name-junion{
+	position: absolute;
+	z-index: 4;
+	font-weight: 500;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%,50%);
+	padding: 7px 30px;
+	white-space: nowrap;
+	background-color: #E5E5E5;
+}
+
+.info-klukva{
+	width: 90vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.klukva-txt{
+	display: flex;
+	justify-content: space-between;
+	width: 900px;
+}
+
+.klukva-txt>p{
+	width: 400px;
+}
+
+.consultation{
+	width: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about-us{
+	display: flex;
+	width: 90vw;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about-item{
+	display: flex;
+	width: 300px;
+	align-items: center;
+	flex-direction: column;
+}
+
+.aboutImg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 126px;
+	height: 126px;
+	border-radius: 100px;
+	background: #EE2E3B;
+}
+
+.aboutImg>img{
+	width: 48px;
+	height: 56px;
+}
+
+.about-item>p{
+	text-align: center;
+	font-size: 16px;
+}

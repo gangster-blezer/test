@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 	<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+	<link rel="stylesheet" href="header.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="normalize.css">
 	<title></title>
@@ -18,38 +19,31 @@
 				<img src="img/close.svg"  alt="">
 			</button>
 			<nav class="mobile-nav">
-				<h4>ДЛЯ ПОДРОСТКОВ</h4>
-				<a href="/">Junior</a>
-				<a href="/">Junior Print</a>
-				<a href="/">Teenager</a>
-				<a href="/">Calypso</a>
-				<a href="/">Calypso Wood</a>
-				<a href="/">Velvet</a>
-				<a href="/">Elegant</a>
-				<h4>ДЛЯ МАЛЫШЕЙ</h4>
-				<a href="/">Mini</a>
-				<a href="/">Mini Print</a>
-				<a href="/">Baby</a>
-				<a href="/">Classic</a>
-				<h4>МЯГКАЯ МЕБЕЛЬ</h4>
-				<a href="">Диваны</a>
-				<a href="/">Интерьерные кровати</a>
-				<a href="/">Пуфы</a>
-				<h4>Матрасы</h4>
-				<h4>2-Х ЯРУСНЫЕ КРОВАТИ</h4>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
-				<a href="/">Тест</a>
+				<h4 class="menu-item">ДЛЯ ПОДРОСТКОВ</h4>
+				<a href="/" class="menu-item">Junior</a>
+				<a href="/" class="menu-item">Junior Print</a>
+				<a href="/" class="menu-item">Teenager</a>
+				<a href="/" class="menu-item">Calypso</a>
+				<a href="/" class="menu-item">Calypso Wood</a>
+				<a href="/" class="menu-item">Velvet</a>
+				<a href="/" class="menu-item">Elegant</a>
+				<h4 class="menu-item">ДЛЯ МАЛЫШЕЙ</h4>
+				<a href="/" class="menu-item">Mini</a>
+				<a href="/" class="menu-item">Mini Print</a>
+				<a href="/" class="menu-item">Baby</a>
+				<a href="/" class="menu-item">Classic</a>
+				<h4  class="menu-item">МЯГКАЯ МЕБЕЛЬ</h4>
+				<a href="" class="menu-item">Диваны</a>
+				<a href="/" class="menu-item">Интерьерные кровати</a>
+				<a href="/" class="menu-item">Пуфы</a>
+				<h4 class="menu-item">Матрасы</h4>
+				<h4 class="menu-item">2-Х ЯРУСНЫЕ КРОВАТИ</h4>
+				<a href="/" class="menu-item">Mini</a>
+				<a href="/" class="menu-item">Calypsa</a>
+				<a href="/" class="menu-item">Calypsa wood</a>
+				<a href="/" class="menu-item">Junior</a>
+				<a href="/" class="menu-item">Junior print</a>
+				<a href="/" class="menu-item">Conata</a>
 			</nav>
 	</div>
 	<div class="black-part-off"></div>
@@ -94,23 +88,19 @@
 	<button id="back" onclick="slide('back')"><img src="img/slider/back.png" alt=""></button>
 	<button id="next" onclick="slide('next')"><img src="img/slider/next.png" alt=""></button>
 </div>
-<div class="itemsf">
-		<h3 class="anim">ДЛЯ ПОДРОСТКОВ</h3>
-	    <h3 class="anim">ДЛЯ МАЛЫШЕЙ</h3>
-	    <h3 class="anim">МЯГКАЯ МЕБЕЛЬ</h3>
-	    <h3 class="anim">2-Х ЯРУСНЫЕ КРОВАТИ</h3>
-</div>
-	<div class="items">
-	<div class="block anim">
+<div class="items">
+		<a href="for-teenagers.html" class="block anim" title="Для подростков">
+		<h3 class="anim itemzag">ДЛЯ ПОДРОСТКОВ</h3>
 	<img class="imgd anim" src="img/1.png" alt="">
-	<div class="txt anim">текст</div>
+	<div class="txt anim"></div>
 	<div class="long anim">
 		<div class="img-discription">Сочетание фактур, ярких цветов и оригинальных инженерных решений позволят каждому подростку проявить свою индивидуальность.</div>
 		<div class="plus"></div>
 	</div>
-	</div>
+		</a>
 
-	<div class="block anim">
+		<a href="/" class="block anim">
+		<h3 class="anim itemzag">ДЛЯ МАЛЫШЕЙ</h3>
 	<img class="imgd anim" src="img/2.png" alt="">
 	<div class="txt anim"></div>
 	<div class="long anim">
@@ -118,34 +108,38 @@
 и любимых. Качество каждой детали обеспечит безопасность для малютки, а компактные размеры позволят разместить полноценную детскую даже в небольшом помещении.</div>
 		<div class="plus"></div>
 	</div>
-</div>
+		</a>
 
-<div class="block anim">
+		<a href="/" class="block anim">
+		<h3 class="anim itemzag">МЯГКАЯ МЕБЕЛЬ</h3>
 	<img class="imgd anim" src="img/3.png" alt="">
 	<div class="txt anim"></div>
 	<div class="long anim">
-		<div class="img-discription">К хорошему нужно приучать с детства. Чувство стиля, осознание гармонии и баланса - это то, что необходимо знать каждому. Наши интерьерные кровати и диваны созданы, чтобы стать стильным акцентом в вашем пространстве.</div>
+		<div class="img-discription">К хорошему нужно приучать с детства. Чувство стиля, осознание гармонии и баланса - это то, что необходимо знать каждому. Наши интерьерные кровати и диваны созданы, чтобы стать стильным акцентом в вашем пространстве.
+		</div>
 		<div class="plus"></div>
 	</div>
-	</div>
+		</a>
 
-	<div class="block anim">
+		<a href="/" class="block anim">
+		<h3 class="anim itemzag">2-Х ЯРУСНЫЕ КРОВАТИ</h3>
 	<img class="imgd anim" src="img/4.png" alt="">
 	<div class="txt anim"></div>
 	<div class="long anim">
 		<div class="img-discription">Изящное функциональное решение для больших 
-и дружных семей.</div>
+и дружных семей.
+		</div>
 		<div class="plus"></div>
 	</div>
-	</div>
+		</a>
 </div>
 	<div class="popular-slider contaner-center">
 		<h2 class="zag zag-pop"><span>ПОПУЛЯРНЫЕ </span>КОЛЛЕКЦИИ</h2>
 		<div class="poplular-slider-track">
 		<div class="popular">
 		<div class="popularinfo">
-			<h4 class="sub-zag">JUNIOR</h4>
-			<p class="small-txt">Подростковая мебель уже не должна быть детской </br> и милой, она должна быть стильной, что выражается</br>в строгих формах, интересной цветовой гамме</br>и высоком качестве. Именно это описание подходит</br>как нельзя лучше для коллекции Junior.</br></br>Cерия имеет очень продуманную эргономику,</br>включающую удобные шкафы, скрытые полки</br>и дополнительные места хранения, позволяющие</br>легко поддерживать порядок в комнате.</p>
+			<h4 class="sub-zag none-select-txt">JUNIOR</h4>
+			<p class="small-txt none-select-txt">Подростковая мебель уже не должна быть детской </br> и милой, она должна быть стильной, что выражается</br>в строгих формах, интересной цветовой гамме</br>и высоком качестве. Именно это описание подходит</br>как нельзя лучше для коллекции Junior.</br></br>Cерия имеет очень продуманную эргономику,</br>включающую удобные шкафы, скрытые полки</br>и дополнительные места хранения, позволяющие</br>легко поддерживать порядок в комнате.</p>
 			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
 			<img src="img/polularslider/banner.png" class="cimg" alt="">
@@ -153,8 +147,8 @@
 
 		<div class="popular">
 		<div class="popularinfo">
-			<h4 class="sub-zag">TEENAGER</h4>
-			<p class="small-txt">Серия «Teenager» в эко-урбанистическом стиле для по-настоящему модных подростков. Она воплотила в себе лучшие идеи со всего мира - яркий стиль больших городов, уют деревянного дома и скандинавское удобство.Сочетание фактур дерева и бетона, яркие цвета, смелые формы и продуманность каждой детали: эта комната как-будто впитала в себя весь дух современности.</p>
+			<h4 class="sub-zag none-select-txt">TEENAGER</h4>
+			<p class="small-txt none-select-txt">Серия «Teenager» в эко-урбанистическом стиле для по-настоящему модных подростков. Она воплотила в себе лучшие идеи со всего мира - яркий стиль больших городов, уют деревянного дома и скандинавское удобство.Сочетание фактур дерева и бетона, яркие цвета, смелые формы и продуманность каждой детали: эта комната как-будто впитала в себя весь дух современности.</p>
 			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
 			<img src="img/polularslider/tenager.png" class="cimg" alt="">
@@ -162,8 +156,8 @@
 
 		<div class="popular">
 		<div class="popularinfo">
-			<h4 class="sub-zag">MINI</h4>
-			<p class="small-txt">Все мы в детстве мечтали быть похожими на родителей: мальчишки клеили усы, девочки надевали мамины туфли.И все мы, конечно, обожали играть и дремать в любимом папином кресле. Именно эта идея вдохновила нас на создание коллекции «Mini».Компактные размеры и выбор модулей позволит создать идеальное пространство, где ваш малыш сможет играть, спать,развиваться,экспериментировать и мечтать.</p>
+			<h4 class="sub-zag none-select-txt">MINI</h4>
+			<p class="small-txt none-select-txt">Все мы в детстве мечтали быть похожими на родителей: мальчишки клеили усы, девочки надевали мамины туфли.И все мы, конечно, обожали играть и дремать в любимом папином кресле. Именно эта идея вдохновила нас на создание коллекции «Mini».Компактные размеры и выбор модулей позволит создать идеальное пространство, где ваш малыш сможет играть, спать,развиваться,экспериментировать и мечтать.</p>
 			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
 			<img src="img/polularslider/3.png" class="cimg" alt="">
@@ -171,8 +165,8 @@
 
 		<div class="popular">
 		<div class="popularinfo">
-			<h4 class="sub-zag">VELVET</h4>
-			<p class="small-txt">Комната «Velvet» - это идеальное сочетание цвета и фактуры, дополненное декором ручной работы.Плавные изгибы в сочетании с прямыми линиями, матовые тона и благородный блеск. В этой коллекции  каждый предмет имеет свое предназначение, а большие пространства дополняются изящными акцентами.</p>
+			<h4 class="sub-zag none-select-txt">VELVET</h4>
+			<p class="small-txt none-select-txt">Комната «Velvet» - это идеальное сочетание цвета и фактуры, дополненное декором ручной работы.Плавные изгибы в сочетании с прямыми линиями, матовые тона и благородный блеск. В этой коллекции  каждый предмет имеет свое предназначение, а большие пространства дополняются изящными акцентами.</p>
 			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
 			<img src="img/polularslider/4.png" class="cimg" alt="">
@@ -180,8 +174,8 @@
 
 		<div class="popular">
 		<div class="popularinfo">
-			<h4 class="sub-zag">CALYPSO</h4>
-			<p class="small-txt">Как и одноименный корабль Кусто, «Calypso» наполнена духом путешествий: наряду с комфортным рабочим столом, на котором без труда можно расположить навигационные карты, есть уютный диван для чтения приключенческих романов и размышлений о новых странствиях. А в ниши для хранения, стилизованные под корабельные сундуки, поместятся целые горы сокровищ. </p>
+			<h4 class="sub-zag none-select-txt">CALYPSO</h4>
+			<p class="small-txt none-select-txt">Как и одноименный корабль Кусто, «Calypso» наполнена духом путешествий: наряду с комфортным рабочим столом, на котором без труда можно расположить навигационные карты, есть уютный диван для чтения приключенческих романов и размышлений о новых странствиях. А в ниши для хранения, стилизованные под корабельные сундуки, поместятся целые горы сокровищ. </p>
 			<div class="button-klukva small-txt popularbtn"><button>Перейти в каталог</button></div>
 		</div>
 			<img src="img/polularslider/5.png" class="cimg" alt="">
@@ -207,21 +201,47 @@
 				<p>Гарантированная безопасность:</br>вся наша мебель сертифицирована</br>и проходит многоуровневый</br>контроль.</p>
 			</div>
 			<div class="about-item">
-				<div class="aboutImg"></div>
+				<div class="aboutImg">
+					<img src="img/aboutUs/soft.svg" alt="">
+				</div>
 				<p>Более 20 коллекций и более 100</br>цветовых решений и тканей на выбор</br>позволят создать уникальный проект</br>для любого пространства</p>
 			</div>
 			<div class="about-item">
-				<div class="aboutImg"></div>
+				<div class="aboutImg">
+					<img src="img/aboutUs/3dp.svg" alt="">
+				</div>
 				<p>Бесплатно сделаем индивидуальный</br>3-D проект дизайна</br>вашей комнаты с учетом ваших</br>пожеланий</p>
 			</div>
 			<div class="about-item">
-				<div class="aboutImg"></div>
+				<div class="aboutImg">
+					<img src="img/aboutUs/material.svg" alt="">
+				</div>
 				<p>Только европейские материалы</br>и фурнитура премиального</br>качества: из Германии и</br>Австрии</p>
 			</div>
 		</div>
 	<div class="best contaner-center">
 	<h2 class="zag"><span>ЛУЧШИЕ ПРЕДЛОЖЕНИЯ </span>МЕСЯЦА</h2>
-	<img src="img/bedslide.png" alt="">
+	<div class="best-slider-track">
+		<div class="best-slide">
+			<img src="img/bestslide/1.png" alt="">
+		</div>
+		<div class="best-slide">
+			<img src="img/bestslide/2.png" alt="">
+		</div>
+		<div class="best-slide">
+			<img src="img/bestslide/3.png" alt="">
+		</div>
+		<div class="best-slide">
+			<img src="img/bestslide/4.png" alt="">
+		</div>
+	</div>
+	<div class="slider-btns best-slider-btns">
+				<button class="activebest-sl-btn" onclick="slidesetb(1,this)" id="1b"></button>
+				<button onclick="slidesetb(2,this)" id="2b"></button>
+				<button onclick="slidesetb(3,this)" id="3b"></button>
+				<button onclick="slidesetb(4,this)" id="4b"></button>
+	</div>
+	<script src="best-slider.js"></script>
 </div>
 <div class="map">
 	<div id="YMapsID"></div>
@@ -274,7 +294,11 @@
 			</div>
 		</div>
 	</div>
-<iframe class="klukva-video" src="https://www.youtube.com/embed/17NbNGbotUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </main>
+<iframe class="klukva-video" src="https://www.youtube.com/embed/17NbNGbotUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<footer class="footer">
+	<img src="img/logo_footer.svg" alt="">
+</footer>
 </body>
 </html>
