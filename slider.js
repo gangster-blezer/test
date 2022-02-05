@@ -14,7 +14,7 @@ function slide(slide) {
 	}
 
 	let start = Date.now(); // запомнить время начала
-  let time = 800;
+  let time = 500;
 
 	let timer = setInterval(function() {
 	  // сколько времени прошло с начала анимации?
