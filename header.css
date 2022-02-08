@@ -3,6 +3,10 @@ a{
 	color: black;
 }
 
+.link-off{
+	pointer-events: none;
+}
+
 .anim{
 	transition: 0.5s;
 }
@@ -31,6 +35,16 @@ a{
 
 .menu-item{
 	font-size: 20px;
+	line-height: 1.8;
+}
+
+.mobile-nav-zag{
+	width: max-content;
+	font-weight: bold;
+	padding-right: 10px;
+	border-bottom: 2px solid black;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .close{
@@ -67,6 +81,7 @@ a{
 	position: absolute;
 	right: 50px;
 	flex-direction: column;
+	width: 350px;
 	height: 500px;
 	overflow-y: scroll;
 }
@@ -86,12 +101,6 @@ a{
   border-radius: 10px;
   width: 1px;
   background-color: #C3C3C3;
-}
-
-.mobile-nav>h4{
-	text-decoration: underline;
-	margin-top: 20px;
-	margin-bottom: 10px;
 }
 
 .mobile-nav>a:hover{

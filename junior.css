@@ -125,6 +125,7 @@ a{
 
 .slide-color>a{
 	position: relative;
+	
 }
 
 .slide-color>a:nth-child(2n){

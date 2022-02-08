@@ -46,6 +46,7 @@ function slidesetb(n,bt) {
       numprevb = Number(n);
 	  	trackb.setAttribute("style", "transform: translateX("+ -((slidewpb*(n-2)) + (slidewpb))+"px);");
  	   	clearInterval(timerpb); // закончить анимацию через 2 секунды
+      document.getElementsByClassName("polu-slider-link")[0].classList.remove("link-off");
 	    return;
 	  }
 
@@ -104,6 +105,7 @@ swipeStartpb = function() {
 swipeActionpb = function() {
   let evt = getEventb();
   console.log("start")
+  document.getElementsByClassName("polu-slider-link")[0].classList.add("link-off");
 
   posY2 = posY1 - evt.clientY;
   posY1 = evt.clientY;
@@ -144,7 +146,6 @@ swipeEndpb = function() {
     
     if(posFinal>0 && posYFinal < 10){
       //console.log(document.getElementById( Number(numprev)+1 ));
-      
   		slidesetb(numprevb+1,document.getElementById( (Number(numprevb)+1)+"b" ));
   	}
   	if(posFinal<0 && posYFinal < 10){

@@ -17,7 +17,7 @@ window.onload = function(){
 	}, 10);
 };
 
-document.getElementsByClassName('desing-project')[0].addEventListener("mouseover", function( event ) {
+/*document.getElementsByClassName('desing-project')[0].addEventListener("mouseover", function( event ) {
 	document.getElementsByClassName('desing-project')[0].classList.add("desing-project-on");
 	document.getElementsByClassName('desing-project')[0].classList.remove("desing-project-off");
-});
+}); */
